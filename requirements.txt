@@ -1,0 +1,10 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+pydantic==2.9.2
+speechrecognition==3.10.4
+pydub==0.25.1
+transformers[torch]==4.44.2
+sentencepiece==0.2.0
+librosa==0.10.2.post1
+numpy==1.26.4
+python-multipart==0.0.9
