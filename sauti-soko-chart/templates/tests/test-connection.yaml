@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "sauti-soko.fullname" . }}-test-connection"
+  labels:
+    {{- include "sauti-soko.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "sauti-soko.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never
